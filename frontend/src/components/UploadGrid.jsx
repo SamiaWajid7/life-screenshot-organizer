@@ -3,9 +3,9 @@ import ScreenshotCard from "./ScreenshotCard";
 
 function UploadGrid({ screenshots }) {
   useEffect(() => {
-    console.log('hello')
-console.log(screenshots)
-  }, [])
+    console.log("Uploaded screenshots:", screenshots);
+  }, [screenshots]); // now logs whenever screenshots change
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {screenshots.map((shot) => (
